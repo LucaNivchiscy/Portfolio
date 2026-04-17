@@ -1,46 +1,58 @@
-# Astro Starter Kit: Basics
+# 🌐 Portfolio de Luca Nivchiscy
 
-```sh
-npm create astro@latest -- --template basics
-```
+Bienvenido a mi portfolio personal, un espacio donde comparto un poco sobre quién soy, mis intereses y metas dentro del mundo del desarrollo.  
+Este proyecto fue creado con el propósito de tener una carta de presentación profesional que vaya más allá de un currículum tradicional y que refleje mi crecimiento como programador.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🧠 Sobre el proyecto
 
-Inside of your Astro project, you'll see the following folders and files:
+Mi portfolio está pensado como una forma de mostrar mi progreso, mis proyectos y la experiencia que voy adquiriendo en el mundo IT.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+---
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## ⚙️ Tecnologías utilizadas
 
-## 🧞 Commands
+- [Astro](https://astro.build/) 
+- [Tailwind CSS](https://tailwindcss.com/) 
+- **Fuente:** [Onest](https://onest.md/)  
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🎯 Objetivo
 
-## 👀 Want to learn more?
+Crear un espacio profesional que me represente como desarrollador, combinando simplicidad, claridad y buenas prácticas.  
+Más allá de ser una herramienta para mostrar mi perfil, también es un proyecto personal que me motiva a seguir aprendiendo y mejorando día a día.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## 🧩 Características principales
+
+- Diseño minimalista y adaptable a cualquier dispositivo 📱  
+- Secciones dedicadas a proyectos, sobre mí y contacto ✉️  
+- Código limpio y organizado para futuras mejoras ⚡  
+
+---
+
+## 🖼️ Vista previa
+
+> 📸 *Próximamente agregaré una imagen o captura del portfolio terminado.*
+
+---
+
+## 💬 Sobre mí
+
+Soy un desarrollador en formación apasionado por la tecnología, el aprendizaje constante y la creación de soluciones útiles.  
+Me entusiasma seguir creciendo en el mundo IT, aprendiendo nuevas herramientas y aportando valor a cada proyecto que realizo.  
+
+---
+
+## 📬 Contacto
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/lucanivchiscy40536/)  
+- ✉️ **Lucanivchiscy5@gmail.com**
+
+---
+
+Gracias por visitar mi portfolio. ¡Nos vemos en el código! 👨‍💻
+# Portfolio
