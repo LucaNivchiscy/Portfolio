@@ -9,7 +9,7 @@ Este proyecto fue creado con el propósito de tener una carta de presentación p
 
 Este portfolio ya está terminado y listo para ser visitado. Está pensado como una forma de mostrar mi progreso, mis proyectos y la experiencia que voy adquiriendo en el mundo IT.
 
-**Sitio en vivo:** https://portfolioluca-phi.vercel.app/
+**Sitio en vivo:** [https://portfolioluca-phi.vercel.app/](https://nivcode.vercel.app/)
 
 ---
 
