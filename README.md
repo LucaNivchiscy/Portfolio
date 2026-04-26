@@ -38,7 +38,8 @@ Más allá de ser una herramienta para mostrar mi perfil, también es un proyect
 
 ## 🖼️ Vista previa
 
-> 📸 *Próximamente agregaré una imagen o captura del portfolio terminado.*
+> <img width="1880" height="901" alt="proyecto portada" src="https://github.com/user-attachments/assets/e9cace6f-9fcd-42f3-93b2-668932ac2bd5" />
+
 
 ---
 
