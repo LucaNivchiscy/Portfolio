@@ -7,15 +7,17 @@ Este proyecto fue creado con el propósito de tener una carta de presentación p
 
 ## 🧠 Sobre el proyecto
 
-Mi portfolio está pensado como una forma de mostrar mi progreso, mis proyectos y la experiencia que voy adquiriendo en el mundo IT.
+Este portfolio ya está terminado y listo para ser visitado. Está pensado como una forma de mostrar mi progreso, mis proyectos y la experiencia que voy adquiriendo en el mundo IT.
+
+**Sitio en vivo:** https://portfolioluca-phi.vercel.app/
 
 ---
 
 ## ⚙️ Tecnologías utilizadas
 
-- [Astro](https://astro.build/) 
-- [Tailwind CSS](https://tailwindcss.com/) 
-- **Fuente:** [Onest](https://onest.md/)  
+- [Astro](https://astro.build/): framework para construir sitios estáticos rápidos con componentes.
+- [Tailwind CSS](https://tailwindcss.com/): estilos utilitarios para un diseño limpio y responsive.
+- **Fuente:** [Onest](https://onest.md/): tipografía principal del sitio.
 
 ---
 
