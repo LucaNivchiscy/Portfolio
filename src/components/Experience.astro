@@ -1,0 +1,33 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+
+const EXPERIENCE = [
+  {
+    date: 'Dic 2022 - Actualidad',
+    title: 'Asistente en Ventas – Emprendimiento Familiar',
+    description:
+      'Atención al cliente, asesoramiento en ventas y gestión de inventario. Encargado del control de stock y apoyo en tareas administrativas y comerciales.',
+  },
+  {
+    date: 'Oct 2021 - Oct 2022',
+    title: 'Operario de Producción y Logística – Laboratorio de Desarrollo Coloid',
+    description:
+      'Control de insumos y materia prima, control de calidad, envasado de líquidos y semilíquidos, y manufactura de productos sólidos.',
+  },
+];
+
+---
+
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map(experience =>(
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+            
+        ))
+    }
+</ol>
+

@@ -1,0 +1,147 @@
+
+---
+---
+<style>
+  .avatar-glow {
+    box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Triangulito para el globo de texto */
+  #cv-bubble::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    
+    /* CAMBIO AQUÍ: */
+    /* Antes era left: 50%. Ahora lo ponemos fijo a la izquierda */
+    left: 24px; /* 24px es la mitad exacta de tu avatar (w-12 = 48px) */
+    
+    transform: translateX(-50%);
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255,255,255,0.2) transparent;
+  }
+</style>
+
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ">
+  <div id="navbar-inner" class="flex justify-between items-center py-5 w-full max-w-[1120px] px-5 mx-auto transition-all duration-300">
+
+    <a id="navbar-home" href="/" role="button" class="relative group">
+      <span class="profile-icon-wrapper relative block">
+        <img 
+          id="navbar-avatar"
+          class="rounded-full w-12 h-12 transition-all duration-300 border-2 border-transparent object-cover cursor-pointer avatar-glow" 
+          src="https://avatars.githubusercontent.com/u/117828861?s=96&v=4" 
+          alt="luca photo"
+        />
+      </span>
+
+      <div 
+        id="cv-bubble"
+        class="absolute top-full mt-4 px-4 py-2 text-sm w-max
+        left-0  bg-white/20 backdrop-blur-md rounded-xl shadow-xl border border-white/30 text-white
+        opacity-0 pointer-events-none transition-all duration-300 transform translate-y-[-10px]"
+      >
+        ¿Querés un CV tradicional? 
+        <span class="underline cursor-pointer font-bold text-yellow-200 hover:text-yellow-100" id="cv-link">Click aquí</span>
+      </div>
+    </a>
+    <nav class="flex flex-row gap-x-4 md:gap-x-10 opacity-90">
+      <a href="#sobre-mi" class="relative inline-block text-sm md:text-base font-medium">Sobre mí<span></span></a>
+      <a href="#experiencia" class="relative inline-block text-sm md:text-base font-medium">Experiencia<span></span></a>
+      <a href="#proyectos" class="relative inline-block text-sm md:text-base font-medium">Proyectos<span></span></a>
+      <a href="https://www.linkedin.com/in/lucanivchiscy40536/" class="relative inline-block text-sm md:text-base font-medium">Contacto<span></span></a>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const inner = document.getElementById("navbar-inner");
+    const avatar = document.getElementById("navbar-avatar");
+    const home = document.getElementById("navbar-home");
+    const bubble = document.getElementById("cv-bubble");
+    const cvLink = document.getElementById("cv-link");
+
+    if (!navbar || !inner || !avatar || !home || !bubble) return;
+
+    const headerAdd = ["bg-black/50", "backdrop-blur-md", "shadow-md"]; // Ajusté bg-black/50 para mejor contraste, ajustalo a tu gusto
+    const headerRemove = headerAdd;
+
+    let bubbleVisible = false;
+
+    // Mostrar/Ocultar globo
+    function toggleBubble() {
+      if (bubbleVisible) {
+        hideBubble();
+      } else {
+        showBubble();
+      }
+    }
+
+    function showBubble() {
+      bubble.classList.remove("opacity-0", "pointer-events-none", "translate-y-[-10px]");
+      bubble.classList.add("opacity-100", "translate-y-0");
+      bubbleVisible = true;
+    }
+
+    function hideBubble() {
+      bubble.classList.add("opacity-0", "pointer-events-none", "translate-y-[-10px]");
+      bubble.classList.remove("opacity-100", "translate-y-0");
+      bubbleVisible = false;
+    }
+
+    // Evento de scroll
+    window.addEventListener("scroll", () => {
+      const scrolled = window.scrollY > 30;
+
+      if (scrolled) {
+        // ESTADO: SCROLLEADO (Navbar compacto)
+        navbar.classList.add(...headerAdd);
+        inner.classList.replace("py-5", "py-3");
+
+        // Avatar se achica pero NO desaparece
+        avatar.classList.replace("w-12", "w-10");
+        avatar.classList.replace("h-12", "h-10");
+        
+        // Quitamos el brillo (ya no llama la atencion)
+        avatar.classList.remove("avatar-glow");
+
+        home.setAttribute("data-compact", "1");
+
+        // Ocultamos el globo si empezamos a bajar
+        if (bubbleVisible) hideBubble();
+
+      } else {
+        // ESTADO: TOP (Navbar normal)
+        navbar.classList.remove(...headerRemove);
+        inner.classList.replace("py-3", "py-5");
+
+        // Avatar tamaño original
+        avatar.classList.replace("w-10", "w-12");
+        avatar.classList.replace("h-10", "h-12");
+
+        // Agregamos el brillo para llamar la atencion
+        avatar.classList.add("avatar-glow");
+
+        home.removeAttribute("data-compact");
+      }
+    });
+
+    // Click en el icono
+    home.addEventListener("click", (e) => {
+      e.preventDefault();
+      
+      toggleBubble();
+    });
+
+    // Acción al hacer click en “Click aquí”
+    cvLink.addEventListener("click", (e) => {
+      e.stopPropagation(); // Evita que el click cierre el globo inmediatamente por propagación
+      window.open("public\\CV_Luca_Nivchiscy_dev.pdf", "_blank");
+    });
+  });
+</script>

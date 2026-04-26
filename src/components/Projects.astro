@@ -1,0 +1,30 @@
+---
+const PROJECT = [
+        {
+        title: "Portfolio",
+        description: "Este es mi portfolio personal.",
+        link: "#",
+        github: "https://github.com/LucaNivchiscy/Portfolio",
+        img: "/projects/proyectoPortfolio.webp",
+        tags: ["Astro", "JavaScript", "Tailwind CSS"]
+    }
+]
+---
+
+{
+    PROJECT.map(({ title, description, tags, img}) => (
+        <article>
+            <h3 class="text-2xl font-bold mb-1 pl-4">{title}</h3>
+            <p class=" text-lg mb-2 text-pretty pl-4">{description}</p>
+            <ul class="flex flex-wrap p-2 gap-2 text-bold pl-4 text-violet-300">
+                {tags.map((tag) => (
+                    <li class=" flex gap-x-2 rounded-full">{tag}</li>
+                ))}
+            </ul>
+            <img 
+                class="rounded-2xl  shadow-2xl" 
+                src={img} 
+                alt={`Captura de pantalla del proyecto ${img}`} />
+        </article>
+    ))
+}

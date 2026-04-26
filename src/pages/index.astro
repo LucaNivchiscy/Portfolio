@@ -1,11 +1,69 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Github from '../components/icons/GithubIcon.astro';
+import Linkedin from '../components/icons/LinkedInIcon.astro';
+import Mail from '../components/icons/MailIcon.astro';
+import Experience from '../components/Experience.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Portfolio de Luca Nivchiscy">
+	<main class="pt-24">
+		<SectionContainer id="sobre-mi">
+			<h1 class="text-white text-3xl md:text-5xl font-bold flex flex-wrap gap-4 pb-6 md:pb-10">
+				Hola, Soy Luca.
+				<a href="https://www.linkedin.com/in/lucanivchiscy40536/" target="_blank" rel="noopener" class="flex items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl leading-relaxed text-gray-100 max-w-2xl">
+				Soy estudiante de Gestion de IT con un gran interes en 
+				<span class="text-[#22d3ee] font-semibold">Ciencia de Datos</span> y 
+				<span class="text-[#a78bfa] font-semibold">Inteligencia Artificial</span>.
+				Estoy construyendo una base de conocimientos mientras disfruto de aprender y explorar 
+				herramientas nuevas que me permitan crear <span class="text-[#22d3ee] font-semibold">soluciones innovadoras</span> a los problemas que se presenten.
+				Este portfolio reúne mis proyectos, mostrando el camino que estoy
+				creando en mi carrera profesional.
+			</h2>
+
+			<ul>
+				<li class="flex flex-wrap gap-4 mt-4">
+					
+					<SocialPill href="https://github.com/LucaNivchiscy">
+					<Github class="size-4 md:size-5" /> Github
+					</SocialPill>
+
+					<SocialPill href="https://www.linkedin.com/in/lucanivchiscy40536/">
+					<Linkedin class="size-4 md:size-5" /> Linkedin
+					</SocialPill>
+
+					<SocialPill href="mailto:luca.nivchiscy@example.com">
+					<Mail class="size-4 md:size-5" /> Lucanivchiscy5@gmail.com
+					</SocialPill>
+
+				</li>
+				</ul>
+
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-bold text-white mb-4 flex gap-x-3 items-center">
+				<Briefcase class="size-7" /> Experiencia
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<h2 class="text-2xl font-bold text-white mb-4 flex gap-x-3 items-center">
+				<Code class="size-7" /> Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
 </Layout>
